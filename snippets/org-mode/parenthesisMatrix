@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: parenthesisMatrix
+# key: pmat
+# condition: (when (org-inside-LaTeX-fragment-p) 'auto)
+# --
+\begin{pmatrix} $1 \end{pmatrix}$0

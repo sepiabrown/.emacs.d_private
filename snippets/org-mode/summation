@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: summation
+# key: summ
+# condition: (when (org-inside-LaTeX-fragment-p) 'auto)
+# --
+\sum_{n=${1:1}}^{${2:\infty}} ${3:a_n z^n}

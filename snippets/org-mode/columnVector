@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: columnVector
+# key: cvec
+# condition: (when (org-inside-LaTeX-fragment-p) 'auto)
+# --
+\begin{pmatrix} ${1:x}_${2:1}\\\\${3:\vdots\\\\} $1_${4:n} \end{pmatrix}

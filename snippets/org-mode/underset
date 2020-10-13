@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: underset
+# key: uu
+# condition: (when (org-inside-LaTeX-fragment-p) 'auto)
+# --
+\underset{${2:\sim}}{${1:x}}$0

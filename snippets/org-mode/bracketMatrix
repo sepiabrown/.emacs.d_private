@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: bracketMatrix
+# key: bmat
+# condition: (when (org-inside-LaTeX-fragment-p) 'auto)
+# --
+\begin{bmatrix} $1 \end{bmatrix}$0

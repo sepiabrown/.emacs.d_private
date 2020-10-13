@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: fractionSimple
+# key: //
+# condition: (when (org-inside-LaTeX-fragment-p) 'auto)
+# --
+\frac{${1:numerator}}{${2:denominator}}$0
