@@ -44,6 +44,8 @@
   (concat "file://"
           (file-name-directory (or load-file-name buffer-file-name))
           "katex.html"))
+(defvar n-width 10)
+(defvar n-height 2)
 (defvar webkit-katex-render--buffer-name " *webkit-katex-render*")
 (defvar webkit-katex-render--resize-flag nil)
 (defvar webkit-katex-render--previous-math nil)
@@ -83,8 +85,8 @@
     (posframe-show buffer
                    :position pos
                    :poshandler 'posframe-poshandler-point-bottom-left-corner
-                   :width 1
-                   :height 1
+                   :width n-width
+                   :height n-height
                    :internal-border-width 5
                    :background-color webkit-katex-render--background-color)))
 
@@ -191,7 +193,10 @@
               (height (frame-parameter frame 'height))
               (new-width (+ 40 (ceiling (aref size 0))))
               (new-height (+ 30 (ceiling (aref size 1)))))
-    (set-frame-size frame new-width new-height t)))
+    (set-frame-size frame new-width new-height t);))
+    (setq n-width new-width)
+    (setq n-height new-height)));
+    ;(list new-width new-height)));;;
 
 (defun webkit-katex-render--resize (&optional arg)
   "Resize katex render frame to widget boundaries."
@@ -356,8 +361,8 @@
       (if webkit-katex-render--resize-flag
           (progn
             (webkit-katex-render--resize)
-            (setq webkit-katex-render--resize-flag nil)))
-      (webkit-katex-render--show pos))
+            (setq webkit-katex-render--resize-flag nil)
+            (webkit-katex-render--show pos))))
     (webkit-katex-render--set-background)
     (webkit-katex-render--set-foreground)
     (webkit-katex-render--ensure-emulation-alist)
