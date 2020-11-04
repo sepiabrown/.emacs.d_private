@@ -1,4 +1,4 @@
-git clone under ~/.emacs.d with folder name as `private` so that the full path is ~/.emacs.d/private 
+git clone under `~/.emacs.d` with folder name as `private` so that the full path is `~/.emacs.d/private` 
 
 # Private directory
 
