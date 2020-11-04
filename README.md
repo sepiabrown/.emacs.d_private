@@ -1,3 +1,5 @@
+git clone under ~/.emacs.d with folder name as `private` so that the full path is ~/.emacs.d/private 
+
 # Private directory
 
 The content of this directory is ignored by Git. This is the default place
